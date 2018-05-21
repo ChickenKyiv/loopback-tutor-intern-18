@@ -71,6 +71,7 @@ typings/
 *.swp
 *.tgz
 *.xml
+*.vscode
 .DS_Store
 .idea
 .project

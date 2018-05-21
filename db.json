@@ -1,7 +1,7 @@
 {
   "ids": {
-    "campground": 5,
-    "reservation": 3
+    "campground": 13,
+    "reservation": 4
   },
   "models": {
     "campground": {
@@ -12,7 +12,9 @@
       "3":
         "{\"name\":\"Grand Canyon Mather Campground\",\"location\":{\"lat\": 36.056472, \"lng\": -112.140728},\"id\":3}",
       "4":
-        "{\"name\":\"Camping Paris Bois de Boulogne\",\"location\":{\"lat\": 48.868879, \"lng\": 2.234914},\"id\":4}"
+        "{\"name\":\"Camping Paris Bois de Boulogne\",\"location\":{\"lat\": 48.868879, \"lng\": 2.234914},\"id\":4}",
+      "5":
+        "{\"name\":\"Campaground test\",\"location\":{\"lat\":40.772122,\"lng\":-111.987621},\"id\":5}"
     },
     "reservation": {
       "1":

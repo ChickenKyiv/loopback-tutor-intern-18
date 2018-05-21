@@ -8,6 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
+    "debug": "node --inspect .",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
