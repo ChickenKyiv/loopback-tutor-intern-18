@@ -1,7 +1,7 @@
 {
   "ids": {
     "campground": 13,
-    "reservation": 4,
+    "reservation": 10,
     "AccessToken": 2
   },
   "models": {
@@ -14,7 +14,13 @@
     },
     "reservation": {
       "1": "{\"startDate\":\"2017-03-21\",\"endDate\":\"2017-03-23\",\"campgroundId\":1,\"id\":1}",
-      "2": "{\"startDate\":\"2017-03-25\",\"endDate\":\"2017-03-31\",\"campgroundId\":2,\"id\":2}"
+      "2": "{\"startDate\":\"2017-03-25\",\"endDate\":\"2017-03-31\",\"campgroundId\":2,\"id\":2}",
+      "4": "{\"startDate\":\"2018-05-22T19:43:37.257Z\",\"endDate\":\"2018-05-26T19:43:37.257Z\",\"campgroundId\":0,\"customerId\":0,\"id\":4}",
+      "5": "{\"startDate\":\"2018-05-22T19:43:37.257Z\",\"endDate\":\"2018-05-26T19:43:37.257Z\",\"campgroundId\":1,\"customerId\":0,\"id\":5}",
+      "6": "{\"startDate\":\"2018-05-22T19:43:37.257Z\",\"endDate\":\"2018-05-26T19:43:37.257Z\",\"campgroundId\":1,\"customerId\":0,\"id\":6}",
+      "7": "{\"startDate\":\"2018-05-22T19:43:37.257Z\",\"endDate\":\"2018-05-26T19:43:37.257Z\",\"campgroundId\":2,\"customerId\":0,\"id\":7}",
+      "8": "{\"startDate\":\"2018-05-22T19:43:37.257Z\",\"endDate\":\"2018-05-26T19:43:37.257Z\",\"campgroundId\":2,\"customerId\":0,\"id\":8}",
+      "9": "{\"startDate\":\"2018-05-22T19:43:37.257Z\",\"endDate\":\"2018-05-26T19:43:37.257Z\",\"campgroundId\":2,\"customerId\":0,\"id\":9}"
     },
     "customer": {
       "1": "{\"name\":\"Andy Van Den Heuvel\",\"username\":\"andy\",\"password\":\"$2a$10$1lmPRI0Xjd5fU8HGdPmDoOkZpIPJj2axcdJYIfc/3RUnBDDqQe31K\",\"email\":\"andy@optis.be\",\"id\":1}",

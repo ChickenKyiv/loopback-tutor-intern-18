@@ -44,5 +44,8 @@
   "Role": {
     "dataSource": "reservationDS",
     "public": false
+  },
+  "Email": {
+    "dataSource": "emailDS"
   }
 }
