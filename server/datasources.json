@@ -6,17 +6,25 @@
     "connector": "memory"
   },
   "emailDS": {
-    "name": "mail",
+    "name": "emailDS",
     "connector": "mail",
-    "transports": [{
-      "type": "SMTP",
-      "host": "smtp.gmail.com",
-      "secure": true,
-      "port": 465,
-      "auth": {
-        "user": "YOUR_USER",
-        "pass": "YOUR_PASSWORD"
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "auth": {
+          "user": "YOUR_USER",
+          "pass": "YOUR_PASSWORD"
+        }
       }
-    }]
+    ]
+  },
+  "photos": {
+    "name": "photos",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/files"
   }
 }

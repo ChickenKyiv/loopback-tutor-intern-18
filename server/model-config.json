@@ -47,5 +47,9 @@
   },
   "Email": {
     "dataSource": "emailDS"
+  },
+  "container": {
+    "dataSource": "photos",
+    "public": true
   }
 }
