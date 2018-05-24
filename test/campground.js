@@ -68,4 +68,32 @@ describe("Campground", function() {
           });
       });
   });
+
+  it("should not accept a name longer than 100 characters", () => {
+    const campground = {
+      name:
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      location: {
+        lat: 0,
+        lng: 0
+      }
+    };
+
+    chai
+      .request(server)
+      .post("/api/customers/login")
+      .send({ username: "andy", password: "andy" })
+      .end(function(err, res) {
+        const token = res.body.id;
+        chai
+          .request(server)
+          .post("/api/campgrounds?access_token=" + token)
+          .send(campground)
+          .end(function(err, res) {
+            err.message.max.should.equal("Name is too long");
+          });
+      });
+  });
+
+  it("should pass", function() {});
 });
