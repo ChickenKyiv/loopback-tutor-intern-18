@@ -12,7 +12,7 @@ module.exports = function(Reservation) {
   }
 
   function sendEmail(campground) {
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       Reservation.app.models.Email.send(formEmailObject(campground), function(
         err,
         mail
