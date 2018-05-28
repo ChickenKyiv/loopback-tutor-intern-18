@@ -4,7 +4,7 @@ Raven.config(
   "https://77aa2ee9a7ce484497f56278982a0809@sentry.io/305339"
 ).install();
 
-module.exports = function(Reservation) {
+module.exports = function (Reservation) {
   function dateValidator(err) {
     if (this.startDate >= this.endDate) {
       err();
@@ -13,7 +13,7 @@ module.exports = function(Reservation) {
 
   function sendEmail(campground) {
     return new Promise((resolve, reject) => {
-      Reservation.app.models.Email.send(formEmailObject(campground), function(
+      Reservation.app.models.Email.send(formEmailObject(campground), function (
         err,
         mail
       ) {
@@ -35,8 +35,7 @@ module.exports = function(Reservation) {
       to: "loopbackintern@yopmail.com",
       from: "noreply@optis.be",
       subject: "Thank you for your reservation at " + campground.name,
-      html:
-        "<p>We confirm your reservation for <strong>" +
+      html: "<p>We confirm your reservation for <strong>" +
         campground.name +
         "</strong></p>"
     };
@@ -46,16 +45,15 @@ module.exports = function(Reservation) {
     message: "endDate should be after startDate"
   });
 
-  Reservation.observe("after save", async function(ctx, next) {
+  Reservation.observe("after save", async function (ctx, next) {
     try {
       const campground = await Reservation.app.models.Campground.findById(
         ctx.instance.campgroundId
       );
       const mail = await sendEmail(campground);
-      next();
     } catch (e) {
       Raven.captureException(e);
-      next(e);
+      throw e;
     }
   });
 };
