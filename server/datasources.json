@@ -1,9 +1,9 @@
 {
   "reservationDS": {
     "name": "reservationDS",
-    "localStorage": "",
-    "file": "db.json",
-    "connector": "memory"
+    "url":
+      "mongodb://heroku_ll5tqpvk:4d9a46dd8t182pgo4dbcu0l4mk@ds129733.mlab.com:29733/heroku_ll5tqpvk",
+    "connector": "loopback-connector-mongodb"
   },
   "emailDS": {
     "name": "emailDS",
