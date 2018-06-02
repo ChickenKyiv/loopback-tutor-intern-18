@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "start": "node .",
     "debug": "node --inspect .",
+    "test": "jest",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
@@ -29,11 +30,21 @@
     "chai-http": "^4.0.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
+    "jest": "^23.1.0",
     "nsp": "^2.1.0"
   },
   "repository": {
     "type": "",
     "url": ""
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/preprocessor.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!loopback-boot)"
+    ]
   },
   "license": "UNLICENSED",
   "description": "reservations"

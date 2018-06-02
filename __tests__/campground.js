@@ -6,6 +6,8 @@ var server = require("../server/server");
 var should = chai.should();
 
 chai.use(chaiHttp);
+var loopback = require("loopback");
+var boot = require("loopback-boot");
 
 describe("Campground", function () {
   it("should list all Campgrounds", function (done) {
