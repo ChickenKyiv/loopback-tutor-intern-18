@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "start": "node .",
     "debug": "node --inspect .",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles --forceExit"
   },
   "dependencies": {
     "compression": "^1.0.3",
