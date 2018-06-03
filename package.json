@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "start": "node .",
     "debug": "node --inspect .",
+    "test": "jest --detectOpenHandles",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
@@ -19,6 +20,8 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.0.0",
     "loopback-component-storage": "^3.3.1",
+    "loopback-connector-mongodb": "^3.4.3",
+    "raven": "^2.6.2",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
@@ -27,11 +30,21 @@
     "chai-http": "^4.0.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
+    "jest": "^23.1.0",
     "nsp": "^2.1.0"
   },
   "repository": {
     "type": "",
     "url": ""
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/preprocessor.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!loopback-boot)"
+    ]
   },
   "license": "UNLICENSED",
   "description": "reservations"
