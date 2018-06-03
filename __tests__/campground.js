@@ -1,22 +1,26 @@
 "use strict";
 
-// var chai = require("chai");
-// var chaiHttp = require("chai-http");
-// var server = require("../server/server");
+const expect = require('expect');
+
+const chai = require("chai");
+const chaiHttp = require("chai-http");
+const server = require("../server/server");
 // var should = chai.should();
 
-// chai.use(chaiHttp);
+chai.use(chaiHttp);
 
 describe("Campground", function () {
-  it("should list all Campgrounds", function () {
-    // chai
-    //   .request(server)
-    //   .get("/api/campgrounds")
-    //   .end(function (err, res) {
-    //     res.should.have.status(200);
-    //     res.body.length.should.not.equal(0);
-    //     done();
-    //   });
+  it("should list all Campgrounds", function (done) {
+     chai
+       .request(server)
+       .get("/api/campgrounds")
+       .end(function (err, res) {
+         expect(res.status).toBe(200);
+        //  res.should.have.status(200);
+        // expect(res.body.length).not.toBe(0)
+        //  res.body.length.should.not.equal(0);
+          done();
+       });
   });
 
   it("should post and delete campgrounds successfully", function () {

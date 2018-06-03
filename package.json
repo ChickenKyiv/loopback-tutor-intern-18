@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "start": "node .",
     "debug": "node --inspect .",
-    "test": "jest --detectOpenHandles",
-    "posttest": "npm run lint && nsp check"
+    "test": "jest --detectOpenHandles"
   },
   "dependencies": {
     "compression": "^1.0.3",
