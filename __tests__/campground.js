@@ -5,28 +5,16 @@ const expect = require('expect');
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const server = require("../server/server");
-// var should = chai.should();
 
 chai.use(chaiHttp);
 
 describe("Campground", function () {
-
-  // afterAll(() => {
-  //   console.log(server.close)
-  //   server.close();
-  //   server.dataSources.reservationDS.disconnect();
-  //   server.dataSources.emailDS.disconnect();
-  //   server.dataSources.photos.disconnect();
-  // })
   it("should list all Campgrounds", function (done) {
      chai
        .request(server)
        .get("/api/campgrounds")
        .then( (res) => {
          expect(res.status).toBe(200);
-        //  res.should.have.status(200);
-        // expect(res.body.length).not.toBe(0)
-        //  res.body.length.should.not.equal(0);
           done();
        })
        .catch(function(err) {
@@ -34,7 +22,7 @@ describe("Campground", function () {
        })
   });
 
-   it("should post and delete campgrounds successfully", function () {
+   it("should post and delete campgrounds successfully", function (done) {
       const campground = {
         name: "mochaTestCammpground",
         location: {
@@ -78,7 +66,7 @@ describe("Campground", function () {
         });
    });
 
-   it("should not accept a name longer than 100 characters", () => {
+   it("should not accept a name longer than 100 characters", (done) => {
       const campground = {
         name:
           "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -98,6 +86,4 @@ describe("Campground", function () {
           done();
         });
    });
-
-//   it("should pass", function () { });
  });
