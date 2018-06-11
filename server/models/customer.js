@@ -22,7 +22,7 @@ module.exports = function(Customer) {
                 })
             } else {
                 adminRole.principals.create({
-                    principalType: RoleMapping.CUSTOMER,
+                    principalType: RoleMapping.USER,
                     principalId: ctx.instance.id
                 }, function(err, principal) {
                     console.log('Principal ', principal);

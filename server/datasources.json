@@ -1,8 +1,7 @@
 {
   "reservationDS": {
+    "url": "mongodb://heroku_xp4mmn13:cgegvnkqjbdtn5mmhne7jqh47u@ds229690.mlab.com:29690/heroku_xp4mmn13",
     "name": "reservationDS",
-    "url":
-      "mongodb://heroku_xp4mmn13:cgegvnkqjbdtn5mmhne7jqh47u@ds229690.mlab.com:29690/heroku_xp4mmn13",
     "connector": "loopback-connector-mongodb"
   },
   "emailDS": {
