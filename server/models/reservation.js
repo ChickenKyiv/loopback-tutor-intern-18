@@ -53,7 +53,7 @@ module.exports = function (Reservation) {
       const mail = await sendEmail(campground);
     } catch (e) {
       Raven.captureException(e);
-      throw e;
+      // throw e;
     }
   });
 };
