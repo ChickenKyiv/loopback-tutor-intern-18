@@ -19,7 +19,7 @@ module.exports = function (Reservation) {
       ) {
         if (err) {
           console.log(err);
-          Raven.captureException(err);
+          // Raven.captureException(err);
           reject(err);
         } else {
           console.log(mail);
@@ -52,8 +52,7 @@ module.exports = function (Reservation) {
       );
       const mail = await sendEmail(campground);
     } catch (e) {
-      Raven.captureException(e);
-      // throw e;
+      throw e;
     }
   });
 };

@@ -2,6 +2,7 @@
 
 var loopback = require("loopback");
 var boot = require("loopback-boot");
+var raven = require("./middleware/raven")
 
 var app = (module.exports = loopback());
 
