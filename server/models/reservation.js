@@ -19,7 +19,6 @@ module.exports = function (Reservation) {
       ) {
         if (err) {
           console.log(err);
-          // Raven.captureException(err);
           reject(err);
         } else {
           console.log(mail);
